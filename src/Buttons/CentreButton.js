@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import colors from "../Theme/theme";
 
 export default class CentreButton extends Component {
@@ -8,7 +8,18 @@ export default class CentreButton extends Component {
     let { backgroundColor } = this.props;
     return (
       <TouchableOpacity style={styles.container}>
-        <View style={[styles.buttonWrapper, { backgroundColor }]} />
+        <View style={[styles.buttonWrapper, { backgroundColor }]}>
+          <FontAwesome
+            name="long-arrow-down"
+            size={12}
+            style={{ marginRight: 3, color: colors.primary }}
+          />
+          <FontAwesome
+            name="long-arrow-up"
+            size={12}
+            style={{ color: colors.primary }}
+          />
+        </View>
       </TouchableOpacity>
     );
   }
@@ -29,6 +40,9 @@ const styles = StyleSheet.create({
     height: 30,
     width: 30,
     borderRadius: 100,
-    zIndex: 999
+    zIndex: 999,
+    flexDirection: "row",
+    justifyContent: "center",
+    paddingTop: 8
   }
 });

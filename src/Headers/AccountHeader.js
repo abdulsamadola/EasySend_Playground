@@ -10,7 +10,7 @@ export default class AccountHeader extends Component {
         <View style={styles.headerWrapper}>
           <Text style={styles.headerText}>Accounts</Text>
           <View style={styles.icon}>
-            <FontAwesome name="search" size={20} />
+            <FontAwesome name="search" size={18} color={colors.black} />
           </View>
         </View>
       </View>
@@ -31,11 +31,11 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   icon: {
-    left: 125,
-    fontWeight: "bold"
+    left: 125
   },
   headerText: {
     fontWeight: "bold",
-    fontSize: 16
+    fontSize: 16,
+    color: colors.black
   }
 });

@@ -35,12 +35,40 @@ export default class AccountContainer extends React.Component {
     return (
       <View style={styles.container}>
         <AccountHeader />
-        <RoundButton backgroundColor={colors.blue01} />
+        <RoundButton
+          rightTopText="Euro"
+          rightBottomText="Eur"
+          leftTopText="200.00"
+          leftBottomText="Main Account"
+          backgroundColor={colors.blue01}
+          color={colors.primary}
+        />
         <CentreButton backgroundColor={colors.green} />
-        <RoundButton backgroundColor={colors.white} />
-        <View style={{ height: "33%" }} />
+        <RoundButton
+          rightTopText="USD"
+          rightBottomText="US Dollar"
+          leftTopText="0.00"
+          leftBottomText="0.00 EUR"
+          backgroundColor={colors.white}
+          color={colors.blue01}
+        />
+        <View style={{ height: "37%" }} />
         <RegisterButton backgroundColor={colors.blue01} />
-        <BottomButton backgroundColor={colors.white} />
+        <BottomButton
+          rightTopText="Total"
+          rightBottomText="Exceptional Payment"
+          leftTopText="200.00"
+          rightColor={colors.black}
+          leftColor={colors.blue01}
+          rightIcon={
+            <FontAwesome
+              name="heart-o"
+              size={10}
+              style={{ paddingRight: 2, paddingTop: 3 }}
+            />
+          }
+          backgroundColor={colors.white}
+        />
       </View>
     );
   }
