@@ -13,7 +13,7 @@ import RoundButton from "../Buttons/RoundButton";
 import CentreButton from "../Buttons/CentreButton";
 import BottomButton from "../Buttons/BottomButton";
 import RegisterButton from "../Buttons/RegisterButton";
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 export default class AccountContainer extends React.Component {
   static navigationOptions = {
@@ -22,7 +22,7 @@ export default class AccountContainer extends React.Component {
       activeTintColor: colors.blue
     },
     tabBarIcon: ({ tintColor }) => (
-      <Ionicons name="ios-person" size={25} color={tintColor} />
+      <FontAwesome name="user-o" size={25} color={tintColor} />
     ),
     headerTitleStyle: {
       //color: "white",

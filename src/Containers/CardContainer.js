@@ -8,7 +8,7 @@ import {
   Alert
 } from "react-native";
 import colors from "../Theme/theme";
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 export default class CardContainer extends React.Component {
   static navigationOptions = {
@@ -17,7 +17,7 @@ export default class CardContainer extends React.Component {
       activeTintColor: colors.blue
     },
     tabBarIcon: ({ tintColor }) => (
-      <Ionicons name="ios-card" size={25} color={tintColor} />
+      <FontAwesome name="credit-card" size={25} color={tintColor} />
     ),
     headerTitleStyle: {
       //color: "white",

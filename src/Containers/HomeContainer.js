@@ -8,7 +8,7 @@ import {
   Alert
 } from "react-native";
 import colors from "../Theme/theme";
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 
 export default class AccountContainer extends React.Component {
   static navigationOptions = {
@@ -17,7 +17,7 @@ export default class AccountContainer extends React.Component {
     },
     tabBarLabel: "Home",
     tabBarIcon: ({ tintColor }) => (
-      <Ionicons name="ios-home" size={25} color={tintColor} />
+      <FontAwesome name="navicon" size={25} color={tintColor} />
     ),
 
     headerTitleStyle: {

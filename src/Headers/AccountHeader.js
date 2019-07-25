@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 import colors from "../Theme/theme";
 
 export default class AccountHeader extends Component {
@@ -10,7 +10,7 @@ export default class AccountHeader extends Component {
         <View style={styles.headerWrapper}>
           <Text style={styles.headerText}>Accounts</Text>
           <View style={styles.icon}>
-            <Ionicons name="ios-search" size={20} />
+            <FontAwesome name="search" size={20} />
           </View>
         </View>
       </View>
