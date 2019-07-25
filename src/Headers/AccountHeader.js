@@ -1,0 +1,41 @@
+import React, { Component } from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
+import colors from "../Theme/theme";
+
+export default class AccountHeader extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <View style={styles.headerWrapper}>
+          <Text style={styles.headerText}>Accounts</Text>
+          <View style={styles.icon}>
+            <Ionicons name="ios-search" size={20} />
+          </View>
+        </View>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    height: "15%",
+    paddingTop: 25,
+    paddingBottom: 25
+  },
+  headerWrapper: {
+    flexDirection: "row",
+    justifyContent: "center"
+  },
+  icon: {
+    left: 125,
+    fontWeight: "bold"
+  },
+  headerText: {
+    fontWeight: "bold",
+    fontSize: 16
+  }
+});

@@ -8,6 +8,11 @@ import {
   Alert
 } from "react-native";
 import colors from "../Theme/theme";
+import AccountHeader from "../Headers/AccountHeader";
+import RoundButton from "../Buttons/RoundButton";
+import CentreButton from "../Buttons/CentreButton";
+import BottomButton from "../Buttons/BottomButton";
+import RegisterButton from "../Buttons/RegisterButton";
 import { Ionicons } from "@expo/vector-icons";
 
 export default class AccountContainer extends React.Component {
@@ -27,13 +32,23 @@ export default class AccountContainer extends React.Component {
   };
 
   render() {
-    return <View style={styles.container} />;
+    return (
+      <View style={styles.container}>
+        <AccountHeader />
+        <RoundButton backgroundColor={colors.blue01} />
+        <CentreButton backgroundColor={colors.green} />
+        <RoundButton backgroundColor={colors.white} />
+        <View style={{ height: "33%" }} />
+        <RegisterButton backgroundColor={colors.blue01} />
+        <BottomButton backgroundColor={colors.white} />
+      </View>
+    );
   }
 }
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.primary,
     flex: 1,
-    justifyContent: "center"
+    padding: 10
   }
 });

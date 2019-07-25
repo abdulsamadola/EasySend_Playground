@@ -1,7 +1,8 @@
 export default {
-  primary: "white",
+  primary: "#F5F5F5",
   white: "#fff",
   icon: "#D6DFEA",
-  codebit: "#1B88FD",
-  blue: "#549BF8"
+  blue01: "#1B88FD",
+  blue: "#549BF8",
+  green: "lightgreen"
 };

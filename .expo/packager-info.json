@@ -3,8 +3,8 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 13916,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 6568,
+  "expoServerNgrokUrl": "https://ia-tv2.360campstore.easysend-playground.exp.direct",
+  "packagerNgrokUrl": "https://packager.ia-tv2.360campstore.easysend-playground.exp.direct",
+  "ngrokPid": 8868
 }
