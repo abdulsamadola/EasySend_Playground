@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import colors from "../Theme/theme";
 
 export default class CentreButton extends Component {
+  _alert = () => {
+    Alert.alert("Transition that will swap both elements will occur!");
+  };
   render() {
     let { backgroundColor } = this.props;
     return (
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity onPress={this._alert} style={styles.container}>
         <View style={[styles.buttonWrapper, { backgroundColor }]}>
           <FontAwesome
             name="long-arrow-down"
