@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     flexDirection: "row",
     justifyContent: "center",
-    padding: 8
+    marginRight: 10
   },
   TopText: {
     fontSize: 18,

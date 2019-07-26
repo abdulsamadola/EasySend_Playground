@@ -62,7 +62,7 @@ export default class HistoryContainer extends React.Component {
             style={{
               fontSize: 14,
               fontWeight: "400",
-              paddingBottom: 10
+              paddingBottom: 20
               //paddingTop: 5
             }}
           >
@@ -89,7 +89,7 @@ export default class HistoryContainer extends React.Component {
             color={colors.blue01}
           />
         </View>
-        <View style={{ height: "25%" }} />
+        <View style={{ height: "30%" }} />
         <RegisterButton backgroundColor={colors.blue01} />
         <BottomButton
           rightTopText="Balance"
