@@ -83,7 +83,7 @@ export default class HistoryContainer extends React.Component {
             color={colors.primary}
           />
           <SquareButton
-            rightTopText="E0.00"
+            rightTopText="€0.00"
             rightBottomText="Euro"
             backgroundColor={colors.white}
             color={colors.blue01}
