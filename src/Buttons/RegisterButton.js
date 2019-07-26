@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 import colors from "../Theme/theme";
 
 export default class RegisterButton extends Component {
+  _alert = () => {
+    Alert.alert("Registration form modal will pop-up!");
+  };
   render() {
     let { backgroundColor } = this.props;
     return (
-      <TouchableOpacity style={styles.container}>
+      <TouchableOpacity onPress={this._alert} style={styles.container}>
         <View style={[styles.buttonWrapper, { backgroundColor }]}>
           <FontAwesome
             name="plus"
