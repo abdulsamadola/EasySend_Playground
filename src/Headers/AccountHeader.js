@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
 import colors from "../Theme/theme";
 
 export default class AccountHeader extends Component {
   render() {
+    let { text, iconRight, iconLeft } = this.props;
     return (
       <View style={styles.container}>
         <View style={styles.headerWrapper}>
-          <Text style={styles.headerText}>Accounts</Text>
-          <View style={styles.icon}>
-            <FontAwesome name="search" size={18} color={colors.black} />
-          </View>
+          <View style={styles.icon2}>{iconRight}</View>
+          <Text style={styles.headerText}>{text}</Text>
+          <View style={styles.icon}>{iconLeft}</View>
         </View>
       </View>
     );
@@ -20,18 +19,20 @@ export default class AccountHeader extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    justifyContent: "center",
-    height: "15%",
-    paddingTop: 25,
-    paddingBottom: 25
+    flex: 1,
+    justifyContent: "center"
+    // height: "2%"
+    //padding: 15
   },
   headerWrapper: {
     flexDirection: "row",
     justifyContent: "center"
   },
   icon: {
-    left: 125
+    left: 120
+  },
+  icon2: {
+    right: 120
   },
   headerText: {
     fontWeight: "bold",

@@ -15,11 +15,13 @@ export default class BottomButton extends Component {
       leftColor,
       rightIcon
     } = this.props;
+
+    const paddingTop = rightBottomText ? 0 : 10;
     return (
       <View style={styles.container}>
         <View style={[styles.buttonWrapper, { backgroundColor }]}>
           <View>
-            <Text style={[styles.TopText, { color: rightColor }]}>
+            <Text style={[styles.TopText, { color: rightColor, paddingTop }]}>
               {rightTopText}
             </Text>
             <View
@@ -36,7 +38,7 @@ export default class BottomButton extends Component {
             </View>
           </View>
           <View>
-            <Text style={[styles.TopText, { color: leftColor }]}>
+            <Text style={[styles.TopText, { color: leftColor, paddingTop }]}>
               {leftTopText}
             </Text>
             <Text style={[styles.BottomText, { color: leftColor }]}>

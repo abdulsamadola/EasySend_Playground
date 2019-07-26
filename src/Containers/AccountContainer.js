@@ -34,7 +34,12 @@ export default class AccountContainer extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <AccountHeader />
+        <AccountHeader
+          text="Accounts"
+          iconLeft={
+            <FontAwesome name="search" size={18} color={colors.black} />
+          }
+        />
         <RoundButton
           rightTopText="Euro"
           rightBottomText="Eur"
