@@ -3,7 +3,7 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity,
+  ActivityIndicator,
   StyleSheet,
   Alert
 } from "react-native";
@@ -16,6 +16,22 @@ import RegisterButton from "../Buttons/RegisterButton";
 import { FontAwesome } from "@expo/vector-icons";
 
 export default class AccountContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true
+    };
+  }
+  Loading = () => {
+    this.setState({
+      isLoading: false
+    });
+  };
+  componentWillMount() {
+    setTimeout(() => {
+      this.Loading();
+    }, 3000);
+  }
   static navigationOptions = {
     tabBarLabel: "Accounts",
     tabBarOptions: {
@@ -32,7 +48,7 @@ export default class AccountContainer extends React.Component {
   };
 
   render() {
-    return (
+    let content = !this.state.isLoading ? (
       <View style={styles.container}>
         <AccountHeader
           text="Accounts"
@@ -75,7 +91,18 @@ export default class AccountContainer extends React.Component {
           backgroundColor={colors.white}
         />
       </View>
+    ) : (
+      <View
+        style={[
+          styles.container,
+          { alignItems: "center", justifyContent: "center" }
+        ]}
+      >
+        <ActivityIndicator color={colors.blue} />
+        <Text style={{ color: colors.black }}>Please wait...</Text>
+      </View>
     );
+    return <View style={{ flex: 1 }}>{content}</View>;
   }
 }
 const styles = StyleSheet.create({
